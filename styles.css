@@ -170,10 +170,10 @@ main {
 
 .tittle {
   display: flex;
-  font-size: 450px;
+  font-size: 28vw;
 }
 .tittleY {
-    display: flex;
+  display: flex;
   font-size: 350px;
   color: var(--main-red);
 }
@@ -209,8 +209,17 @@ svg {
 
 /* CONTACT design (END) */
 
-@media (min-width: 774px) {
-  .text {
-    font-size: 25vw;
-  }
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 1024px) {
+    .tittle {
+  font-size: 48vw;
+  font-family: "Vina Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
 }
