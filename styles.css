@@ -174,8 +174,7 @@ main {
 }
 .tittleY {
   display: flex;
-  font-size: 350px;
-  color: var(--main-red);
+  font-size: 20vw;
 }
 svg {
   width: 100%;
@@ -215,11 +214,14 @@ svg {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 1024px) {
-    .tittle {
-  font-size: 48vw;
-  font-family: "Vina Sans", serif;
-  font-weight: 400;
-  font-style: normal;
-
-}
+  .tittle {
+    font-size: 48vw;
+    font-family: "Vina Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .tittleY {
+    display: flex;
+    font-size: 28vw;
+  }
 }
