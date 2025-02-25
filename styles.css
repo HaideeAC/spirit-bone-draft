@@ -70,6 +70,7 @@ nav {
 
 .nav-links li {
   margin: 10px 0;
+
 }
 
 .nav-links li a {
@@ -77,6 +78,8 @@ nav {
   text-decoration: none;
   font-weight: bold;
   font-size: 15vh;
+  white-space: nowrap;
+
 }
 
 .nav-links li a:hover {
@@ -103,10 +106,10 @@ nav {
 /* NAV-BAR (END) */
 
 main {
-  padding: 20px;
   min-height: 100vh;
   margin-top: -60px;
   /* min-height: calc(100vh - 160px);  Ensures consistent height */
+  padding-bottom: 54px;
 }
 
 h1 {
@@ -222,7 +225,7 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-padding: 0;
+  padding: 0;
 }
 .contact-form {
   list-style: none;
@@ -237,7 +240,7 @@ padding: 0;
 @media (max-width: 1024px) {
   /* NAV-BAR*/
   .nav-links li a {
-    font-size: 12vw;
+    /* font-size: 12vw; */
   }
   /* INDEX design */
   .tittle {
