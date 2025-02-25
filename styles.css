@@ -5,8 +5,16 @@
   --textured: url(/images/texture.jpg);
 }
 
+.font-chiller {
+  font-family: "Chiller", sans-serif;
+}
 .font-tittle {
   font-family: "Saira Stencil One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-viva {
+  font-family: "Vina Sans", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -15,12 +23,8 @@
   font-weight: 400;
   font-style: normal;
 }
-.font-chiller {
-  font-family: "Chiller", sans-serif;
-}
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: rgb(0, 0, 0);
@@ -36,6 +40,7 @@ header {
 
 /* NAV-BAR (START) */
 nav {
+  font-family: "Vina Sans", serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,17 +48,19 @@ nav {
 
 .nav-links {
   list-style: none;
-  padding: 0;
+  padding: 20px;
   margin: 0;
   display: none; /* Collapsed by default */
   flex-direction: column;
+  justify-content: space-evenly;
   background-color: var(--main-red);
   position: absolute;
-  top: 60px;
+  top: 30px;
   left: 50%;
+  width: 90%;
+  height: 80vh;
   transform: translateX(-50%);
-  width: 200px;
-  text-align: center;
+  text-align: left;
   z-index: 1;
 }
 
@@ -69,10 +76,12 @@ nav {
   color: black;
   text-decoration: none;
   font-weight: bold;
+  font-size: 15vh;
 }
 
 .nav-links li a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: white;
 }
 
 .menu-circle {
@@ -199,13 +208,25 @@ svg {
 /* ABOUT design (END) */
 
 /* CONTACT design (START) */
-.contact {
+.contact-container {
+  border: 0.1rem solid yellow;
+  height: 88vh;
+  padding-top: 4.5rem;
   align-items: center;
   display: flex;
-  justify-content: center;
   flex-direction: column;
 }
-
+.contact-form {
+  border: 0.1rem solid yellow;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+padding: 0;
+}
+.contact-form {
+  list-style: none;
+}
 /* CONTACT design (END) */
 
 /* Landscape phones and down */
@@ -214,6 +235,11 @@ svg {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 1024px) {
+  /* NAV-BAR*/
+  .nav-links li a {
+    font-size: 12vw;
+  }
+  /* INDEX design */
   .tittle {
     font-size: 48vw;
     font-family: "Vina Sans", serif;
