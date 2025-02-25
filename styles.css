@@ -84,7 +84,7 @@ nav {
 
 .nav-links li a:hover {
   text-decoration: none;
-  color: white;
+animation: glitch 0.3s linear normal forwards;
 }
 
 .menu-circle {
@@ -102,7 +102,18 @@ nav {
   position: absolute;
   z-index: 2;
 }
-
+@keyframes glitch {
+    0%, 20%, 90%{
+        color: transparent;
+    }
+    10%, 40%{
+        color: black;
+    }
+    
+    100%{
+        color: white;
+    }
+}
 /* NAV-BAR (END) */
 
 main {
@@ -244,7 +255,7 @@ svg {
   }
   /* INDEX design */
   .tittle {
-    font-size: 48vw;
+    font-size: 48vh;
     font-family: "Vina Sans", serif;
     font-weight: 400;
     font-style: normal;
