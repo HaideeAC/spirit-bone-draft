@@ -101,6 +101,13 @@ nav {
   animation: glitch 0.3s linear normal forwards;
 }
 
+.nav-click {
+    animation: fade 0.2s linear normal forwards;
+}
+.nav-select {
+    animation: selected 0.5s linear 0.1s linear normal forwards;
+}
+
 @keyframes glitch {
   0%,
   20%,
@@ -119,6 +126,14 @@ nav {
       -webkit-background-clip:text;
       color:transparent; */
   }
+}
+@keyframes fade {
+    to{
+        color: transparent;
+    }
+}
+@keyframes selected {
+    
 }
 /* NAV-BAR (END) */
 
