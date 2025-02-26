@@ -44,8 +44,23 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+.menu-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: var(--main-red);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
 .nav-links {
   list-style: none;
   padding: 20px;
@@ -53,7 +68,8 @@ nav {
   display: none; /* Collapsed by default */
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: var(--main-red);
+  /* background-color: var(--main-red); */
+  backdrop-filter: blur(20px);
   position: absolute;
   top: 30px;
   left: 50%;
@@ -70,49 +86,39 @@ nav {
 
 .nav-links li {
   margin: 10px 0;
-
 }
 
 .nav-links li a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 15vh;
   white-space: nowrap;
-
 }
 
 .nav-links li a:hover {
   text-decoration: none;
-animation: glitch 0.3s linear normal forwards;
+  animation: glitch 0.3s linear normal forwards;
 }
 
-.menu-circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.circle {
-  width: 30px;
-  height: 30px;
-  background-color: var(--main-red);
-  border-radius: 50%;
-  position: absolute;
-  z-index: 2;
-}
 @keyframes glitch {
-    0%, 20%, 90%{
-        color: transparent;
-    }
-    10%, 40%{
-        color: black;
-    }
-    
-    100%{
-        color: white;
-    }
+  0%,
+  20%,
+  90% {
+    color: transparent;
+  }
+  10%,
+  40% {
+    color: white;
+  }
+
+  100% {
+    color: var(--main-red);
+    /* background-image: url('/images/nav-bar.jpg');
+      background-clip:text;
+      -webkit-background-clip:text;
+      color:transparent; */
+  }
 }
 /* NAV-BAR (END) */
 
@@ -138,7 +144,6 @@ footer {
 }
 
 /* INDEX design (START) */
-/* General Page Styling */
 main {
   padding: 0;
 }
