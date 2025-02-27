@@ -44,7 +44,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .menu-circle {
   display: flex;
@@ -78,6 +77,8 @@ nav {
   transform: translateX(-50%);
   text-align: left;
   z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.5s ease;
 }
 
 .nav-links.active {
@@ -96,18 +97,14 @@ nav {
   white-space: nowrap;
 }
 
+/* Navigation hover/transition effects */
+
 .nav-links li a:hover {
   text-decoration: none;
   animation: glitch 0.3s linear normal forwards;
 }
 
-.nav-click {
-    animation: fade 0.2s linear normal forwards;
-}
-.nav-select {
-    animation: selected 0.5s linear 0.1s linear normal forwards;
-}
-
+/* Animation for hovered items to glitch */
 @keyframes glitch {
   0%,
   20%,
@@ -127,14 +124,65 @@ nav {
       color:transparent; */
   }
 }
-@keyframes fade {
-    to{
-        color: transparent;
-    }
+
+.nav-selected {
+  animation: brighten-and-fade 1s forwards;
+  z-index: 10;
+  position: relative;
 }
-@keyframes selected {
-    
+
+.nav-fading {
+  animation: fade-out 0.5s forwards;
 }
+
+.nav-background-fade {
+  animation: background-fade 1s forwards;
+}
+
+/* Animation for selected item to brighten then fade */
+@keyframes brighten-and-fade {
+  0% {
+    filter: brightness(1);
+    opacity: 1;
+    transform: scale(1);
+  }
+  30% {
+    filter: brightness(2);
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  85% {
+    transform: translateX(80rem);
+  }
+  100% {
+    filter: brightness(1);
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* Animation for non-selected items to fade out */
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Animation for the background to fade out */
+@keyframes background-fade {
+  0% {
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
 /* NAV-BAR (END) */
 
 main {
