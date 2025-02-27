@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spirit&Bone - Contact Page</title>
-<link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,15 +12,21 @@
       rel="stylesheet"
     />
     <link href="https://fonts.cdnfonts.com/css/chiller" rel="stylesheet" />
-    
+
     <link
-    href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap"
+      rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik+Maps&display=swap"
       rel="stylesheet"
-    />  </head>
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
   <body>
     <header class="header">
       <nav>
@@ -36,37 +42,88 @@
       </nav>
     </header>
 
-    <main>
-      <div class="contact-container">
-        <h1 class="contact-tittle">Contact Us</h1>
-        <form id="contactForm">
-          <ul class="contact-form">
-            <li>
-              <label for="name">Name:</label>
-              <br />
-              <input type="text" id="name" name="name" required />
-            </li>
+    <main class="contact-main">
+      <div class="contact-hero">
+        <h1 class="contact-title">CONTACTS</h1>
 
-            <li>
-              <label for="email">Email:</label>
-              <br />
-              <input type="email" id="email" name="email" required />
-            </li>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <p>Contact the storytellers! We also have social channels!</p>
 
-            <li>
-              <label for="message">Message:</label>
-              <br />
+            <div class="association-section">
+              <h2>ASSOCIATION<br />IN THE GRIMOIRE</h2>
+              <p>
+                "Spirit&Bone" is an association that unites people from every
+                corner and beyond, trying to create a large and lively
+                community. The major hubs in which we move are all the facets of
+                the game, from card games to role-playing games, through video
+                games and board games.
+              </p>
+            </div>
+
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <div class="form-group">
+              <label for="name">NAME</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="NAME"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-MAIL</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-MAIL"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">MESSAGE</label>
               <textarea
                 id="message"
                 name="message"
-                rows="4"
+                placeholder="MESSAGE"
+                rows="6"
                 required
               ></textarea>
-              <br />
-              <button type="submit" class="contact-button">Send Message</button>
-            </li>
-          </ul>
-        </form>
+            </div>
+
+            <div class="form-group consent-group">
+              <input type="checkbox" id="consent" name="consent" required />
+              <label for="consent"
+                >I consent to the
+                <a
+                  href="https://www.legislation.gov.uk/eur/2016/679#:~:text=(40)In%20order%20for%20processing,Regulation%2C%20including%20the%20necessity%20for"
+                  target="_blank"
+                  class="consent-link"
+                  >processing of data</a
+                >
+                in accordance with the provisions of EU Reg. 679/2016.</label
+              >
+            </div>
+
+            <button type="submit" class="send-button">SEND</button>
+          </div>
+        </div>
       </div>
     </main>
 

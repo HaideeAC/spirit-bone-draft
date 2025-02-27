@@ -5,6 +5,7 @@
   --textured: url(/images/texture.jpg);
 }
 
+/* Fonts (START) */
 .font-chiller {
   font-family: "Chiller", sans-serif;
 }
@@ -23,6 +24,7 @@
   font-weight: 400;
   font-style: normal;
 }
+/* Fonts (END) */
 
 body {
   margin: 0;
@@ -36,6 +38,27 @@ header {
   padding: 10px 20px;
   position: relative;
   margin-top: 20px;
+}
+
+main {
+  min-height: 100vh;
+  margin-top: -60px;
+  /* min-height: calc(100vh - 160px);  Ensures consistent height */
+  padding-bottom: 54px;
+}
+
+h1 {
+  color: var(--main-red);
+}
+
+footer {
+  background-color: var(--main-red);
+  color: black;
+  text-align: center;
+  padding: 0px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /* NAV-BAR (START) */
@@ -185,27 +208,6 @@ nav {
 
 /* NAV-BAR (END) */
 
-main {
-  min-height: 100vh;
-  margin-top: -60px;
-  /* min-height: calc(100vh - 160px);  Ensures consistent height */
-  padding-bottom: 54px;
-}
-
-h1 {
-  color: var(--main-red);
-}
-
-footer {
-  background-color: var(--main-red);
-  color: black;
-  text-align: center;
-  padding: 0px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
 /* INDEX design (START) */
 main {
   padding: 0;
@@ -290,24 +292,179 @@ svg {
 /* ABOUT design (END) */
 
 /* CONTACT design (START) */
-.contact-container {
-  border: 0.1rem solid yellow;
-  height: 88vh;
-  padding-top: 4.5rem;
+/* Contact page styles - Add these to your existing styles.css file */
+
+.contact-body {
+  background-color: black;
+  color: white;
+  font-family: "Arial", sans-serif;
+  background-image: url("/images/texture1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.contact-main {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 5%;
+}
+
+.contact-hero {
+  position: relative;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.contact-title {
+  font-size: 5rem;
+  font-family: "Ultra", serif;
+  margin-bottom: 40px;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.social-icon {
+  display: flex;
   align-items: center;
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
-.contact-form {
-  border: 0.1rem solid yellow;
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 0;
+
+.social-icon:hover {
+  background-color: white;
+  color: black;
 }
-.contact-form {
-  list-style: none;
+
+.association-section {
+  margin-top: 50px;
+}
+
+.association-section h2 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-family: "Ultra", serif;
+}
+
+.contact-form-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  padding-right: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: white;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.consent-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.consent-group input {
+  width: auto;
+  margin-top: 5px;
+}
+
+.consent-group label {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.consent-link {
+  color: white;
+  text-decoration: underline;
+}
+
+.send-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 12px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  border-radius: 10px;
+
+}
+
+.send-button:hover {
+  background-color: var(--main-red);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 3.5rem;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .association-section h2 {
+    font-size: 1.8rem;
+  }
 }
 /* CONTACT design (END) */
 
