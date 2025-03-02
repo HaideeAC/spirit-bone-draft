@@ -47,8 +47,8 @@
           </video>
         </div>
 
-        <!-- SVG Mask -->
-        <svg class="svg-mask">
+        <!-- SVG Mask for Desktop -->
+        <svg class="svg-mask desktop-title">
           <defs>
             <!-- Mask Definition -->
             <mask id="text-mask">
@@ -105,6 +105,107 @@
           >
             &
           </text>
+        </svg>
+
+        <!-- SVG Mask for Mobile (Vertical Layout) -->
+        <svg class="svg-mask mobile-title">
+          <defs>
+            <!-- Mask Definition for Mobile -->
+            <mask id="text-mask-mobile">
+              <rect class="rect" width="100%" height="100%" fill="white" />
+              <text
+                class="vertical-letter font-tittle"
+                x="50%"
+                y="8%"
+                text-anchor="middle"
+              >S</text>
+              <text
+                class="vertical-letter font-tittle"
+                x="50%"
+                y="16%"
+                text-anchor="middle"
+              >P</text>
+              <text
+                class="vertical-letter font-tittle"
+                x="50%"
+                y="24%"
+                text-anchor="middle"
+              >I</text>
+              <text
+                class="vertical-letter font-tittle"
+                x="50%"
+                y="32%"
+                text-anchor="middle"
+              >R</text>
+              <text
+                class="vertical-letter font-tittle"
+                x="50%"
+                y="40%"
+                text-anchor="middle"
+              >I</text>
+              <text
+                class="vertical-letter font-tittle"
+                x="50%"
+                y="48%"
+                text-anchor="middle"
+              >T</text>
+              <text
+                class="vertical-amp font-chiller"
+                x="50%"
+                y="58%"
+                text-anchor="middle"
+              >&</text>
+              <text
+                class="vertical-letter font-tittle"
+                x="50%"
+                y="68%"
+                text-anchor="middle"
+              >B</text>
+              <text
+                class="vertical-letter font-tittle"
+                x="50%"
+                y="76%"
+                text-anchor="middle"
+              >O</text>
+              <text
+                class="vertical-letter font-tittle"
+                x="50%"
+                y="84%"
+                text-anchor="middle"
+              >N</text>
+              <text
+                class="vertical-letter font-tittle"
+                x="50%"
+                y="92%"
+                text-anchor="middle"
+              >E</text>
+            </mask>
+
+            <!-- Background Image Pattern (same as desktop) -->
+            <pattern
+              id="background-image-mobile"
+              patternUnits="userSpaceOnUse"
+              width="100%"
+              height="100%"
+            >
+              <image
+                href="/images/texture1.jpg"
+                width="100%"
+                height="100%"
+                preserveAspectRatio="xMidYMid slice"
+              />
+            </pattern>
+          </defs>
+
+          <!-- Apply Image to Masked Text for Mobile -->
+          <rect
+            width="100%"
+            height="100%"
+            fill="url(#background-image-mobile)"
+            mask="url(#text-mask-mobile)"
+          />
+
+          <!-- Separate '&' Symbol is included in the mask for mobile -->
         </svg>
       </div>
     </main>

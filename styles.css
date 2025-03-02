@@ -311,7 +311,7 @@ svg {
 .team-container {
   position: relative;
   width: 100%;
-min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
   margin: 0 auto;
 }
 
@@ -709,24 +709,52 @@ min-height: calc(100vh - 60px);
   color: white;
 }
 
+/* CONTACT design (END) */
+
 /* Responsive adjustments */
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .vertical-letter {
+    font-size: 14vw;
+  }
+
+  .vertical-amp {
+    font-size: 16vw;
+  }
+}
+
+/* Mobile Devices */
 @media (max-width: 768px) {
   .contact-title {
     font-size: 3.5rem;
   }
-
   .contact-wrapper {
     flex-direction: column;
   }
-
   .association-section h2 {
     font-size: 1.8rem;
   }
-}
-/* CONTACT design (END) */
-
-/* Landscape phones and down */
-@media (max-width: 480px) {
+  .desktop-title {
+    display: none;
+  }
+  .mobile-title {
+    display: block;
+  }
+  /* Ensure the banner takes up full height */
+  .banner {
+    height: 100vh;
+  }
+  /* Adjust video container for mobile */
+  .video-container {
+    height: 100vh;
+  }
+  /* Responsive styling for vertical text */
+  .vertical-letter {
+    font-size: 12vw;
+  }
+  .vertical-amp {
+    font-size: 15vw;
+  }
 }
 
 /* Landscape phone to portrait tablet */
