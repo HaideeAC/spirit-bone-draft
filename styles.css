@@ -81,7 +81,7 @@ nav {
   background-color: var(--main-red);
   border-radius: 50%;
   position: absolute;
-  z-index: 2;
+  z-index: 100;
 }
 .nav-links {
   list-style: none;
@@ -99,7 +99,7 @@ nav {
   height: 80vh;
   transform: translateX(-50%);
   text-align: left;
-  z-index: 1;
+  z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color 0.5s ease;
 }
@@ -291,11 +291,10 @@ svg {
 }
 /* ABOUT design (END) */
 
-
 /* MEET THE TEAM design (START) */
 .team-body {
-  background-color: black;
-  background-image: url('/images/texture1.jpg');
+  /* background-color: black; */
+  background-image: url("/images/texture1.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
@@ -304,23 +303,15 @@ svg {
 
 .team-main {
   min-height: calc(100vh - 60px);
-  padding: 40px 5%;
+  padding: 60px 5% 40px;
   overflow: hidden;
   position: relative;
-}
-
-.team-main h1 {
-  font-family: 'Ultra', serif;
-  font-size: 5rem;
-  margin-bottom: 60px;
-  text-align: center;
-  color: white;
 }
 
 .team-container {
   position: relative;
   width: 100%;
-  height: 70vh;
+min-height: calc(100vh - 60px);
   margin: 0 auto;
 }
 
@@ -328,14 +319,15 @@ svg {
 .team-member {
   position: absolute;
   transition: all 0.5s ease;
+  z-index: 1;
 }
 
 .member-image-container {
   width: 180px;
   height: 180px;
   position: relative;
-  z-index: 2;
-  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+  animation: float 7s ease-in-out infinite;
   transition: all 0.5s ease;
 }
 
@@ -346,57 +338,24 @@ svg {
   background-color: var(--main-red);
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.3s easei;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-/* Create irregular circular shapes using clip-path */
-#member1 .member-image {
-  clip-path: circle(48% at 50% 50%);
-}
-
-#member2 .member-image {
-  clip-path: ellipse(45% 48% at 50% 50%);
-}
-
-#member3 .member-image {
-  clip-path: circle(47% at 52% 48%);
-}
-
-#member4 .member-image {
-  clip-path: ellipse(48% 45% at 51% 49%);
-}
-
-#member5 .member-image {
-  clip-path: circle(46% at 49% 51%);
-}
-
-#member6 .member-image {
-  clip-path: ellipse(47% 49% at 48% 50%);
-}
-
-#member7 .member-image {
-  clip-path: circle(47% at 51% 48%);
-}
-
-#member8 .member-image {
-  clip-path: ellipse(46% 48% at 50% 51%);
 }
 
 /* Positioning team members randomly */
 #member1 {
   top: 10%;
-  left: 15%;
+  left: 10%;
 }
 
 #member2 {
   top: 25%;
-  left: 70%;
+  left: 75%;
 }
 
 #member3 {
-  top: 60%;
-  left: 25%;
+  top: 65%;
+  left: 20%;
 }
 
 #member4 {
@@ -405,17 +364,17 @@ svg {
 }
 
 #member5 {
-  top: 50%;
-  left: 65%;
+  top: 55%;
+  left: 70%;
 }
 
 #member6 {
-  top: 35%;
-  left: 10%;
+  top: 40%;
+  left: 5%;
 }
 
 #member7 {
-  top: 65%;
+  top: 70%;
   left: 45%;
 }
 
@@ -489,6 +448,7 @@ svg {
   transition: all 0.5s ease;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
   padding: 15px;
   border-radius: 10px;
   margin-top: 20px;
@@ -516,17 +476,23 @@ svg {
 }
 
 /* Hover effects */
+.team-member:hover {
+  z-index: 10;
+}
 .team-member:hover .member-image-container {
   animation-play-state: paused;
   transform: scale(1.1);
+  z-index: 10;
 }
 
 .team-member:hover .member-info {
   opacity: 1;
   visibility: visible;
+  z-index: 11;
 }
 
 /* CSS to fade other members when one is hovered */
+
 .team-container:hover .team-member:not(:hover) {
   opacity: 0.5;
 }
@@ -537,28 +503,51 @@ svg {
     font-size: 3rem;
     margin-bottom: 40px;
   }
-  
+
   .team-container {
     height: 140vh; /* Taller container for mobile */
   }
-  
+
   /* Reposition for smaller screens */
-  #member1 { top: 5%; left: 20%; }
-  #member2 { top: 25%; left: 60%; }
-  #member3 { top: 45%; left: 20%; }
-  #member4 { top: 65%; left: 60%; }
-  #member5 { top: 85%; left: 20%; }
-  #member6 { top: 105%; left: 60%; }
-  #member7 { top: 125%; left: 20%; }
-  #member8 { top: 145%; left: 60%; }
-  
+  #member1 {
+    top: 5%;
+    left: 20%;
+  }
+  #member2 {
+    top: 25%;
+    left: 60%;
+  }
+  #member3 {
+    top: 45%;
+    left: 20%;
+  }
+  #member4 {
+    top: 65%;
+    left: 60%;
+  }
+  #member5 {
+    top: 85%;
+    left: 20%;
+  }
+  #member6 {
+    top: 105%;
+    left: 60%;
+  }
+  #member7 {
+    top: 125%;
+    left: 20%;
+  }
+  #member8 {
+    top: 145%;
+    left: 60%;
+  }
+
   .member-image-container {
     width: 140px;
     height: 140px;
   }
 }
 /* MEET THE TEAM design (END) */
-
 
 /* CONTACT design (START) */
 /* Contact page styles - Add these to your existing styles.css file */
@@ -713,7 +702,6 @@ svg {
   transition: all 0.3s ease;
   font-weight: bold;
   border-radius: 10px;
-
 }
 
 .send-button:hover {
