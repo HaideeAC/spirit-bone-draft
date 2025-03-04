@@ -65,6 +65,13 @@ footer {
   bottom: 0;
   width: 100%;
 }
+@media (max-width: 430px) {
+  footer {
+    padding-left: 25px;
+    text-align: start;
+    font-size: 3vw;
+  }
+}
 
 /* NAV-BAR (START) */
 nav {
@@ -211,6 +218,13 @@ nav {
   }
 }
 
+@media (max-width: 768px) {
+  .nav-links li a {
+    font-size: 18vw;
+  }
+  .nav-links {
+  }
+}
 /* NAV-BAR (END) */
 
 /* INDEX design (START) */
@@ -269,6 +283,7 @@ main {
 .tittle {
   display: flex;
   font-size: 28vw;
+  letter-spacing: 0.05em; /* Spacing between letters */
 }
 .tittleY {
   display: flex;
@@ -296,6 +311,77 @@ svg {
   height: 100%;
 }
 
+/* Responsive adjustments */
+/* Landscape phones and down */
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .vertical-letter {
+    font-size: 10vw;
+  }
+  .vertical-letter2 {
+    font-size: 11vw;
+  }
+  .vertical-amp {
+    font-size: 14vw;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  /* INDEX - design */
+  .contact-title {
+    font-size: 3.5rem;
+  }
+  .contact-wrapper {
+    flex-direction: column;
+  }
+  .association-section h2 {
+    font-size: 1.8rem;
+  }
+  .desktop-title {
+    display: none;
+  }
+  .mobile-title {
+    display: block;
+  }
+  /* Ensure the banner takes up full height */
+  .banner {
+    height: 100vh;
+  }
+  /* Adjust video container for mobile */
+  .video-container {
+    height: 100vh;
+  }
+  /* Responsive styling for vertical text */
+  .vertical-letter {
+    font-size: 25vw;
+  }
+  .vertical-letter2 {
+    font-size: 28vw;
+  }
+  .vertical-amp {
+    font-size: 36vw;
+  }
+  /* Create more space between SPIRIT and BONE */
+  .mobile-title {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 1024px) {
+  .tittle {
+    font-size: 48vh;
+    font-family: "Vina Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .tittleY {
+    display: flex;
+    font-size: 28vw;
+  }
+}
 /* INDEX design (END) */
 
 /* ABOUT design (START) */
@@ -325,7 +411,7 @@ svg {
 
 .team-main {
   min-height: calc(100vh - 60px);
-  padding: 60px 5% 40px;
+  padding: 60px 0 40px 0;
   overflow: hidden;
   position: relative;
 }
@@ -333,7 +419,7 @@ svg {
 .team-container {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 90px);
   margin: 0 auto;
 }
 
@@ -364,45 +450,50 @@ svg {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Positioning team members randomly */
+/* Positioning team members */
 #member1 {
-  top: 10%;
-  left: 10%;
+  top: 15%;
+  left: 23%;
 }
 
 #member2 {
-  top: 25%;
-  left: 75%;
-}
-
-#member3 {
-  top: 65%;
-  left: 20%;
-}
-
-#member4 {
-  top: 15%;
+  top: 10%;
   left: 45%;
 }
 
+#member3 {
+  top: 15%;
+  left: 67%;
+}
+
+#member4 {
+  top: 40%;
+  left: 7%;
+}
+
 #member5 {
-  top: 55%;
-  left: 70%;
+  top: 40%;
+  left: 35%;
 }
 
 #member6 {
   top: 40%;
-  left: 5%;
+  left: 55%;
 }
 
 #member7 {
-  top: 70%;
-  left: 45%;
+  top: 40%;
+  left: 83%;
 }
 
 #member8 {
-  top: 40%;
-  left: 40%;
+  top: 65%;
+  left: 20%;
+}
+
+#member9 {
+  top: 65%;
+  left: 70%;
 }
 
 /* Give each member a different floating animation timing */
@@ -436,6 +527,9 @@ svg {
 
 #member8 .member-image-container {
   animation-delay: -3.5s;
+}
+#member9 .member-image-container {
+  animation-delay: -4s;
 }
 
 /* Floating animation */
@@ -501,6 +595,7 @@ svg {
 .team-member:hover {
   z-index: 10;
 }
+
 .team-member:hover .member-image-container {
   animation-play-state: paused;
   transform: scale(1.1);
@@ -521,52 +616,55 @@ svg {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .team-main h1 {
-    font-size: 3rem;
-    margin-bottom: 40px;
+  .team-main {
+    padding-bottom: 100px;
   }
 
   .team-container {
-    height: 140vh; /* Taller container for mobile */
+    min-height: calc(100vh - 90px);
   }
 
   /* Reposition for smaller screens */
   #member1 {
     top: 5%;
-    left: 20%;
+    left: 10%;
   }
   #member2 {
     top: 25%;
-    left: 60%;
+    left: 50%;
   }
   #member3 {
     top: 45%;
-    left: 20%;
+    left: 10%;
   }
   #member4 {
     top: 65%;
-    left: 60%;
+    left: 50%;
   }
   #member5 {
     top: 85%;
-    left: 20%;
+    left: 10%;
   }
   #member6 {
     top: 105%;
-    left: 60%;
+    left: 50%;
   }
   #member7 {
     top: 125%;
-    left: 20%;
+    left: 10%;
   }
   #member8 {
     top: 145%;
-    left: 60%;
+    left: 50%;
+  }
+  #member9 {
+    top: 165%;
+    left: 10%;
   }
 
   .member-image-container {
     width: 140px;
-    height: 140px;
+    height: 120px;
   }
 }
 /* MEET THE TEAM design (END) */
@@ -731,81 +829,35 @@ svg {
   color: white;
 }
 
-/* CONTACT design (END) */
 
-/* Responsive adjustments */
-/* Landscape phones and down */
-/* Landscape phones and down */
-@media (max-width: 480px) {
-  .vertical-letter {
-    font-size: 10vw;
-  }
-.vertical-letter2 {
-    font-size: 11vw;
-}
-  .vertical-amp {
-    font-size: 14vw;
+@media (max-width: 345px) {
+    .contact-form-container {
+    width: 200px;
   }
 }
-
-/* Mobile Devices */
-@media (max-width: 768px) {
-    /* INDEX - design */
+@media (max-width: 430px) {
+  .contact-form-container {
+    flex: 1;
+    min-width: 220px;
+    max-width: 280px;
+    padding-right: 20px;
+  }
+  .contact-info {
+    flex: 1;
+    max-width: 300px;
+  }
+}
+@media (max-width: 628px) {
   .contact-title {
-    font-size: 3.5rem;
+    padding-top: 20px;
+    font-size: 10vw;
+    font-family: "Ultra", serif;
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
+    color: white;
   }
-  .contact-wrapper {
-    flex-direction: column;
-  }
-  .association-section h2 {
-    font-size: 1.8rem;
-  }
-  .desktop-title {
-    display: none;
-  }
-  .mobile-title {
-    display: block;
-  }
-  /* Ensure the banner takes up full height */
-  .banner {
-    height: 100vh;
-  }
-  /* Adjust video container for mobile */
-  .video-container {
-    height: 100vh;
-  }
-  /* Responsive styling for vertical text */
-  .vertical-letter {
-    font-size: 25vw;
-  }
-  .vertical-letter2 {
-    font-size: 28vw;
+    .association-section h2 {
+        font-size: 7vw;
+    }
 }
-  .vertical-amp {
-    font-size: 36vw;
-  }
-  /* Create more space between SPIRIT and BONE */
-  .mobile-title {
-    display: block;
-    width: 100%;
-  }
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 1024px) {
-  /* NAV-BAR*/
-  .nav-links li a {
-    /* font-size: 12vw; */
-  }
-  /* INDEX design */
-  .tittle {
-    font-size: 48vh;
-    font-family: "Vina Sans", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .tittleY {
-    display: flex;
-    font-size: 28vw;
-  }
-}
+/* CONTACT design (END) */

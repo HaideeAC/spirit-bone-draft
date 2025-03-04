@@ -48,17 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const originalTop = parseFloat(window.getComputedStyle(member).top);
     const originalLeft = parseFloat(window.getComputedStyle(member).left);
 
-    // Add subtle random movement
-    setInterval(() => {
-      // Only apply if not being hovered
-      if (!member.classList.contains("hovered")) {
-        const randomX = Math.random() * 10 - 5; // -5 to 5 pixels
-        const randomY = Math.random() * 10 - 5; // -5 to 5 pixels
-
-        member.style.transform = `translate(${randomX}px, ${randomY}px)`;
-      }
-    }, 3000); // Update every 3 seconds
-
     // Handle hover state
     member.addEventListener("mouseenter", function () {
       member.classList.add("hovered");
@@ -107,9 +96,8 @@ if (contactForm) {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
-    const consent = document.getElementById("consent").checked;
 
-    if (!name || !email || !message || !consent) {
+    if (!name || !email || !message) {
       alert(
         "Please fill out all fields and accept the data processing consent."
       );
