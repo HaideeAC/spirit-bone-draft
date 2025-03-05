@@ -222,8 +222,6 @@ nav {
   .nav-links li a {
     font-size: 18vw;
   }
-  .nav-links {
-  }
 }
 /* NAV-BAR (END) */
 
@@ -304,7 +302,7 @@ main {
 
 .vertical-amp {
   font-size: 18vw;
-  fill: #c00001;
+  fill: var(--main-red);
 }
 svg {
   width: 100%;
@@ -401,16 +399,13 @@ svg {
 
 /* MEET THE TEAM design (START) */
 .team-body {
-  /* background-color: black; */
-  background-image: url("/images/texture1.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
-  color: white;
 }
 
 .team-main {
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 90px);
   padding: 60px 0 40px 0;
   overflow: hidden;
   position: relative;
@@ -468,7 +463,7 @@ svg {
 
 #member4 {
   top: 40%;
-  left: 7%;
+  left: 5%;
 }
 
 #member5 {
@@ -563,7 +558,7 @@ svg {
   visibility: hidden;
   transition: all 0.5s ease;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 15px;
   border-radius: 10px;
@@ -592,26 +587,50 @@ svg {
 }
 
 /* Hover effects */
-.team-member:hover {
-  z-index: 10;
+.team-container:hover .team-member:not(:hover) {
+  opacity: 1; /* Reset to full opacity by default */
 }
 
+/* Hover effects for team members */
 .team-member:hover .member-image-container {
   animation-play-state: paused;
   transform: scale(1.1);
   z-index: 10;
 }
 
+.team-member:hover .member-image {
+  filter: blur(5px) brightness(0.5); /* Blur and darken the background image */
+}
+
 .team-member:hover .member-info {
   opacity: 1;
   visibility: visible;
   z-index: 11;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Adjust width as needed */
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* CSS to fade other members when one is hovered */
+/* Ensure text is readable on blurred background */
+.team-member:hover .member-info h3 {
+  color: var(--main-red);
+  margin-bottom: 10px;
+}
 
-.team-container:hover .team-member:not(:hover) {
-  opacity: 0.5;
+.team-member:hover .member-info h4 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.team-member:hover .member-info p {
+  color: #cccccc;
 }
 
 /* Responsive adjustments */
@@ -829,7 +848,6 @@ svg {
   color: white;
 }
 
-
 /* @media (max-width: 345px) {
     .contact-form-container {
   } 
@@ -855,8 +873,8 @@ svg {
     letter-spacing: 0.1em;
     color: white;
   }
-    .association-section h2 {
-        font-size: 7vw;
-    }
+  .association-section h2 {
+    font-size: 7vw;
+  }
 }
 /* CONTACT design (END) */
